@@ -3,7 +3,7 @@ export const eventModule = {
     isOnce: false,
     execute: async function (err) {
         console.error(`unhandledRejectionAsync!: ${err.message}\n${err.stack}`);
-        const myPromise = new Promise((resolve) => {
+        const myPromise = new Promise(function (resolve) {
             setTimeout(function () {
                 console.log("Resolved");
                 resolve();
