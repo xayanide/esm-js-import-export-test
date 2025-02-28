@@ -1,0 +1,8 @@
+{
+  "name": "esm-js-import-export-test",
+  "version": "1.0.0",
+  "description": "One of xayanide's personal tests and code references",
+  "author": "xayanide",
+  "license": "GPL-3.0-only",
+  "type": "module"
+}
