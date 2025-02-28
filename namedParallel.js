@@ -51,7 +51,7 @@ async function loadEventHandlers(testName) {
         console.log(`loadEventHandlers(): FINISH. Map -> Import -> BindEventListener. Time elapsed: ${nodePerformanceHook.now() - s1}`);
         const s2 = nodePerformanceHook.now();
         await Promise.all(promisesArray);
-        console.log("loadEventHandlers(): FINISH. ResolvePromises", nodePerfHooks.performance.now() - s2);
+        console.log(`loadEventHandlers(): FINISH. ResolvePromises. Time elapsed: ${nodePerfHooks.performance.now() - s2}`);
     } catch (err) {
         console.error(`loadEventHandlers(): Encountered error while loading event handlers:${err.message}\n${err.stack}`);
     }
