@@ -40,7 +40,7 @@ async function loadEventHandlers(testName) {
         console.log("loadEventHandlers(): START");
         const eventFiles = await nodeFsPromises.readdir(eventsDir);
         const s1 = nodePerformanceHook.now();
-        const promisesArray = eventFiles.map(async (file) => {
+        const promisesArray = eventFiles.map(async function (file) {
             if (!file.endsWith(".js")) {
                 return;
             }
