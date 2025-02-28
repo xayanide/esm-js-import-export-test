@@ -40,6 +40,11 @@ async function loadEventHandlers(testName) {
         console.log("loadEventHandlers(): START");
         const eventFiles = await nodeFsPromises.readdir(eventsDir);
         const s1 = nodePerformanceHook.now();
+        /**
+        Using function declaration as the callback for map() is fine if we're functional. However if we are dealing with classes,
+        one must use arrow functions because using function declarations can change the context of 'this' of a class, which is not what we want,
+        causing things to break involving things using 'this' inside the class
+        */
         const promisesArray = eventFiles.map(async function (file) {
             if (!file.endsWith(".js")) {
                 return;
