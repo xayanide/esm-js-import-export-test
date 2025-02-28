@@ -8,9 +8,9 @@
 - [Node.js](https://nodejs.org/en) (Recommended: LTS version)
 
 ### Code references available:
-1. Modules with `Default exports`
+1. Event modules with `Default exports`: `defaultProcessEvents`
     - Sequential imports and event listener binds: `defaultSequential.js`
     - Parallel imports and event listener binds: `defaultParallel.js`
-2. Modules with `Named exports`
+2. Event modules with `Named exports`: `namedProcessEvents`
     - Sequential imports and event listener binds: `namedSequential.js`
     - Parallel imports and event listener binds: `namedParallel.js`
